@@ -6,17 +6,17 @@
             </i> GatitoBook
         </a>
         <app-menu #menu>
-            <ul class="list-unstyled">
-                <li>
-                    <a [routerLink]="['animais', 'novo']">Novo Animal</a>
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active " style="text-decoration:none;" [routerLink]="[ 'animais', 'novo'] ">Novo Animal</a>
                 </li>
             </ul>
         </app-menu>
         <div *ngIf="user$ | async as user ">
             <div *ngIf="user.name; else login ">
-                <i class="fa fa-user-circle mr-1" style="color: white;"></i>
-                <a class="mr-1 " style="color: white;">{{ user.name }} |</a>
-                <a (click)="logout()" style="color: white;">Logout</a>
+                <i class="fa fa-user-circle mr-1 " style="color: white; "></i>
+                <a class="mr-1 " style="color: white; ">{{ user.name }} |</a>
+                <a (click)="logout() " style="color: white; ">Logout</a>
             </div>
         </div>
     </nav>
