@@ -3,9 +3,9 @@
         <a class=" navbar-brand ">GatitoBook</a>
         <div *ngIf="user$ | async as user ">
             <div *ngIf="user.name; else login ">
-                <i class="fa fa-user-circle mr-1 "></i>
-                <a class="mr-1 ">{{ user.name }}</a>
-                <a (click)="logout() ">Logout</a>
+                <i class="fa fa-user-circle mr-1" style="color: white;"></i>
+                <a class="mr-1 " style="color: white;">{{ user.name }} |</a>
+                <a (click)="logout()" style="color: white;">Logout</a>
             </div>
         </div>
     </nav>
